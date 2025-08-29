@@ -1,11 +1,11 @@
 import Navbar from "../../../components/navbar";
 
-const Info = () => {
+const Login = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div>Info Page</div>
+      <div>Login Page</div>
     </>
   );
 };
-export default Info;
+export default Login;

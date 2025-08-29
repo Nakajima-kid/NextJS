@@ -1,15 +1,9 @@
-import Link from "next/link";
+import Navbar from "../../../components/navbar";
 
 const About = () => {
   return (
     <>
-      <nav>
-        <div className="flex gap-4">
-          <Link href={"/"}>Home</Link>
-          <Link href={"/about/"}>About</Link>
-          <Link href={"/info"}>Info</Link>
-        </div>
-      </nav>
+      <Navbar></Navbar>
       <div>About Page</div>
     </>
   );
