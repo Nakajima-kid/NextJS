@@ -1,9 +1,13 @@
 "use client";
 
+import { create } from "../utils/action";
+import { useActionState } from "react";
+
 const Form = () => {
+  const [msg, formAction] = useActionState(create, null);
   return (
     <>
-      <form>
+      <form action={formAction}>
         Form
         <br />
         <input
@@ -20,7 +24,11 @@ const Form = () => {
           defaultValue="name"
         />
         <br />
-        <button type="submit" className="border bg-red-500">Submit</button>
+        <button type="submit" className="border bg-red-500">
+          Submit
+        </button>
+        <br />
+        {msg}
       </form>
     </>
   );
