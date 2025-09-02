@@ -1,7 +1,17 @@
 "use client";
 
+import { useFormStatus } from "react-dom";
 import { create } from "../utils/action";
 import { useActionState } from "react";
+
+const SubmitButton = () => {
+  const { pending } = useFormStatus();
+  return (
+    <button type="submit" disabled={pending} className="bg-red-500">
+      {pending ? "Submitting" : "Submit"}
+    </button>
+  );
+};
 
 const Form = () => {
   const [msg, formAction] = useActionState(create, null);
@@ -24,9 +34,7 @@ const Form = () => {
           defaultValue="name"
         />
         <br />
-        <button type="submit" className="border bg-red-500">
-          Submit
-        </button>
+        <SubmitButton />
         <br />
         {msg}
       </form>
