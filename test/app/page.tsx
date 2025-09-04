@@ -1,5 +1,5 @@
-import Navbar from "../components/Navbar";
-import Counter from "../components/Counter";
+import Navbar from "./components/Navbar";
+import Counter from "./components/Counter";
 
 const page = async () => {
   await new Promise((resolve)=>setInterval(resolve,1000))
