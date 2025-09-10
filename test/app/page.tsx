@@ -4,7 +4,7 @@ const HomePage = () => {
   return (
     <>
     <div>HomePage</div>
-    <Button variant='destructive'>Submit</Button>
+    <Button variant={'outline'}>Submit</Button>
     </>
   )
 }
