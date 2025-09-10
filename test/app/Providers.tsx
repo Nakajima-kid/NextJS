@@ -1,12 +1,17 @@
-import { ThemeProvider } from "./theme-provider"
+import { ThemeProvider } from "./theme-provider";
 
-const Providers = () => {
+const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-    <ThemeProvider>
-        
-    </ThemeProvider>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        {children}
+      </ThemeProvider>
     </>
-  )
-}
-export default Providers
+  );
+};
+export default Providers;
