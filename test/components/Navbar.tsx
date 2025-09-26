@@ -1,7 +1,7 @@
 import { DarkMode } from "./DarkMode";
 import DropdownList from "./DropdownList";
 import Logo from "./Logo";
-import Search from "./Search";
+import Search from "./navbar/Search";
 
 const Navbar = () => {
   return (
